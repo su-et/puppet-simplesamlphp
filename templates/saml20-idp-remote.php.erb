@@ -1,0 +1,26 @@
+<?php
+
+$metadata['<%= @entity_id %>'] = array(
+  'name'                    => '<%= @title %>',
+  'SingleSignOnService'     => '<%= @sso_url %>',
+  <% if @description -%>
+  'description'             => '<%= @description %>',
+  <% end -%>
+  <% if @organization_name and @organization_url and @organization_display_name -%>
+  'OrganizationName'        => '<%= @organization_name %>',
+  'OrganizationDisplayName' => '<%= @organization_display_name %>',
+  'OrganizationURL'         => '<%= @organization_url %>',
+  <% end -%>
+  'base64attributes'        => <%= @base64attributes %>,
+  <% if @cert_data -%>
+  'certData'                => '<%= @cert_data %>',
+  <% elsif @certificate -%>
+  'certificate'             => '<%= @certificate %>',
+  <% elsif @cert_fingerprint -%>
+  'certFingerprint'         => '<%= @cert_fingerprint %>',
+  <% end -%>
+  <% if @icon -%>
+  'icon'                    => '<%= @icon %>',
+  <% end -%>
+);
+
