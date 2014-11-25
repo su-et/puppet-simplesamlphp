@@ -1,4 +1,4 @@
-class simplesamlphp::remote_idp (
+define simplesamlphp::remote_idp (
   $ensure = present,
   $authproc = undef,
   $base64_attributes = FALSE,
